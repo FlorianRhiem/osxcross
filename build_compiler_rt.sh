@@ -53,8 +53,9 @@ case $CLANG_VERSION in
   3.9*) BRANCH=release_39; USE_CMAKE=1; ;;
   4.0*) BRANCH=release_40; USE_CMAKE=1; ;;
   5.0*) BRANCH=release_50; USE_CMAKE=1; ;;
-  6.0*) BRANCH=master; USE_CMAKE=1; ;;
-  * ) echo "Unsupported Clang version, must be >= 3.2 and <= 6.0" 1>&2; exit 1;
+  6.0*) BRANCH=release_60; USE_CMAKE=1; ;;
+  7.0*) BRANCH=master; USE_CMAKE=1; ;;
+  * ) echo "Unsupported Clang version, must be >= 3.2 and <= 7.0" 1>&2; exit 1;
 esac
 
 if [ $(osxcross-cmp $CLANG_VERSION ">=" 3.5) -eq 1 ]; then
